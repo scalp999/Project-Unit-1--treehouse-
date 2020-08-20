@@ -73,8 +73,8 @@ let quotes = [
  * `getRandomQuote` function
 ***/
 
-/*** I created a function for calling random number and a function calling
-*  random quote based on its index postion in the array ***/
+/*** I created a function for calling random number and a function for calling
+* a random quote based on its index postion in the array ***/
 function getRandomNumber(arr)
     {
   const randomNumber = Math.round(Math.random() * (arr) );
@@ -113,7 +113,7 @@ function printQuote() {
     }
     textDisplay += `</p>`;
 
-// Here the background color is changed every time the function is called
+// The background color will be changed every time the function is called
   const red = getRandomNumber(256);
   const green = getRandomNumber(256);
   const blue = getRandomNumber(256);
