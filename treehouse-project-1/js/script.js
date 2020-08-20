@@ -18,51 +18,47 @@ project 1 - A Random Quote Generator
 
 //My quote theme is the 'space exploration'. I ve added extra property name 'tag' to objects in the array.
 
-let quotes = [
- {
-  text:"I'm sure the universe is full of intelligent life. It's just been too intelligent to come here.",
+const quotes = [
+{
+  quote:"I'm sure the universe is full of intelligent life. It's just been too intelligent to come here.",
   source:"Arthur C. Clarke",
   citation:"IRC discussion at Scifi.com",
-  year:"1996",
-  tag: []
- },
+  year:"1996"
+},
 {
-  text:"I don't think the human race will survive the next thousand years, unless we spread into space. There are too many accidents that can befall life on a single planet. But I'm an optimist. We will reach out to the stars.",
+  quote:"I don't think the human race will survive the next thousand years, unless we spread into space. There are too many accidents that can befall life on a single planet. But I'm an optimist. We will reach out to the stars.",
   source:"Stephen Hawking",
   citation:"The Daily Telegraph",
   year:"2001",
   tag: ['scientist']
 },
 {
-  text:"Space is for everybody. It's not just for a few people in science or math, or for a select group of astronauts. That's our new frontier out there, and it's everybody's business to know about space.",
+  quote:"Space is for everybody. It's not just for a few people in science or math, or for a select group of astronauts. That's our new frontier out there, and it's everybody's business to know about space.",
   source:"Christa Mcauliffe",
-  citation:"",
   year:"1985",
   tag:['scientist','astronaut']
 },
 {
-  text:"Space travel is life-enhancing, and anything that's life-enhancing is worth doing. It makes you want to live forever.",
+  quote:"Space travel is life-enhancing, and anything that's life-enhancing is worth doing. It makes you want to live forever.",
   source:"Ray Bradbury",
   citation:"Playboy",
   year:"1996",
-  tag:[]
 },
 {
-  text:"We cannot predict the new forces, powers, and discoveries that will be disclosed to us when we reach the other planets and set up new laboratories in space. They are as much beyond our vision today as fire or electricity would be beyond the imagination of a fish.",
+  quote:"We cannot predict the new forces, powers, and discoveries that will be disclosed to us when we reach the other planets and set up new laboratories in space. They are as much beyond our vision today as fire or electricity would be beyond the imagination of a fish.",
   source:"Arthur C. Clarke",
   citation:"Space and the Spirit of Man",
   year:"",
-  tag:[]
 },
 {
-  text:"Some say that we should stop exploring space, that the cost in human lives is too great. But Columbia's crew would not have wanted that. We are a curious species, always wanting to know what is over the next hill, around the next corner, on the next island. And we have been that way for thousands of years.",
+  quote:"Some say that we should stop exploring space, that the cost in human lives is too great. But Columbia's crew would not have wanted that. We are a curious species, always wanting to know what is over the next hill, around the next corner, on the next island. And we have been that way for thousands of years.",
   source:"Stuart Atkinson",
   citation:"New Mars",
   year:"2003",
   tag: ['scientist']
 },
 {
-  text:"As long as we are a single-planet species, we are vulnerable to extinction by a planetwide catastrophe, natural or self-induced. Once we become a multiplanet species, our chances to live long and prosper will take a huge leap skyward.",
+  quote:"As long as we are a single-planet species, we are vulnerable to extinction by a planetwide catastrophe, natural or self-induced. Once we become a multiplanet species, our chances to live long and prosper will take a huge leap skyward.",
   source:"David Grinspoon",
   citation:"Slate",
   year:"2004",
@@ -81,22 +77,21 @@ function getRandomNumber(arr)
   return randomNumber;
     }
 
-function GetRandomQuote ()
+function getRandomQuote ()
     {
-  let quoteRandom = quotes[ getRandomNumber(quotes.length - 1)];
+  const quoteRandom = quotes[ getRandomNumber(quotes.length - 1)];
   return quoteRandom;
     }
-
 
 /***
  * `printQuote` function
 ***/
-// printQuote function prints random quote on the screen
+// printQuote function prints a random quote on the screen
 
 function printQuote() {
-  let callQuote = GetRandomQuote();
+  const callQuote = getRandomQuote();
   let textDisplay =
-    `<p class = "quote">"${callQuote.text}"</p>
+    `<p class = "quote">"${callQuote.quote}"</p>
      <p class = "source">${callQuote.source}`;
 
    if (callQuote.citation)
